@@ -9,7 +9,7 @@ export const SearchBar = () => {
 
         <nav className="navbar navbar-expand-lg bg-light">
             <div className="container">
-                <div class="collapse navbar-collapse d-flex justify-content-between" id="navbarSupportedContent">
+                <div className="collapse navbar-collapse d-flex justify-content-between" id="navbarSupportedContent">
                     <img height={70} src={logo} />
 
                     <form className="d-flex col-xl-6 col-8" role="search">
@@ -18,7 +18,7 @@ export const SearchBar = () => {
                     </form>
                     <div className="d-flex p-2">
                         <button className="btn btn-dark" href="#">
-                        <FontAwesomeIcon  icon={faUser} />
+                        <FontAwesomeIcon icon={faUser} />
                         </button>
                         <Cart/>
                     </div>
