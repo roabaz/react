@@ -11,39 +11,39 @@ export const NavBar = () => {
               <b>MUJER</b>
             </a>
             <div className="dropdown-menu" >
-              <a className="dropdown-item" href="#">dropdown link</a>
-              <a className="dropdown-item" href="#">dropdown link</a>
-              <a className="dropdown-item" href="#">dropdown link</a>
+              <a className="dropdown-item" href="#">Camisas</a>
+              <a className="dropdown-item" href="#">Vestidos</a>
+              <a className="dropdown-item" href="#">Pantalones</a>
             </div>
           </li>
           <li className="nav-item dropdown">
             <a className="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <b>HOMBRE</b>
+              <b>HOMBRE</b>
             </a>
             <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a className="dropdown-item" href="#">dropdown link</a>
-              <a className="dropdown-item" href="#">dropdown link</a>
-              <a className="dropdown-item" href="#">dropdown link</a>
+              <a className="dropdown-item" href="#">Camisas</a>
+              <a className="dropdown-item" href="#">Vestidos</a>
+              <a className="dropdown-item" href="#">Pantalones</a>
             </div>
           </li>
           <li className="nav-item dropdown">
             <a className="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <b>NIÑOS</b>
+              <b>NIÑOS</b>
             </a>
             <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a className="dropdown-item" href="#">dropdown link</a>
-              <a className="dropdown-item" href="#">dropdown link</a>
-              <a className="dropdown-item" href="#">dropdown link</a>
+              <a className="dropdown-item" href="#">Camisas</a>
+              <a className="dropdown-item" href="#">Vestidos</a>
+              <a className="dropdown-item" href="#">Pantalones</a>
             </div>
           </li>
           <li className="nav-item dropdown">
             <a className="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <b>MARCAS</b>
+              <b>MARCAS</b>
             </a>
             <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a className="dropdown-item" href="#">dropdown link</a>
-              <a className="dropdown-item" href="#">dropdown link</a>
-              <a className="dropdown-item" href="#">dropdown link</a>
+              <a className="dropdown-item" href="#">only</a>
+              <a className="dropdown-item" href="#">magma</a>
+              <a className="dropdown-item" href="#">lolita</a>
             </div>
           </li>
           <li className="nav-item">
