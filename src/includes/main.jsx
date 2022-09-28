@@ -22,10 +22,10 @@ export const Main = (params) => {
 
         <div className="container text-center p-5">
 
-            <button className="btn btn-primary mx-2"> {count} productos </button>
-            <button className="btn btn-success mx-2" onClick={addCount}>+</button>
-            <button className="btn btn-warning mx-2" onClick={lessCount}>-</button>
-            <button className="btn btn-danger mx-2" onClick={clearCount}>0</button>
+            <button className="alert alert-primary mx-2"><b> {count} productos </b></button>
+            <button className="btn btn-success mx-2" onClick={addCount}><b>+</b></button>
+            <button className="btn btn-warning mx-2" onClick={lessCount}><b>-</b></button>
+            <button className="btn btn-danger mx-2" onClick={clearCount}><b>0</b></button>
 
             <p className='p-5'>{params.content}</p>
 
