@@ -1,4 +1,4 @@
-import logo from "../resources/logo.webp";
+import logo from "../resources/img/logo.webp";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUser } from '@fortawesome/free-solid-svg-icons'
 import { Cart } from "../includes/cart";

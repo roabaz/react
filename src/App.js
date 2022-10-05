@@ -1,7 +1,7 @@
-import "./App.css";
+import "./resources/css/app.css";
 import { NavBar } from "./includes/navBar";
 import { SearchBar } from "./includes/searchBar";
-import { Main } from "./includes/main";
+import { ItemListContainer } from "./includes/itemListContainer";
 import { useState } from "react";
 
 function App() {
@@ -13,7 +13,7 @@ function App() {
       <hr />
       <NavBar />
       <hr />
-      <Main content="Hello World, this is cubiC Ecommerce" />
+      <ItemListContainer content="Hello World, this is cubiC Ecommerce" />
     </div>
   );
 }
