@@ -77,4 +77,18 @@
 a {
   text-decoration: none !important;
 }
+
+.item {
+  margin-right: 5px !important;
+}
+
+.claseActiva {
+  color: red;
+  margin: 30px;
+}
+
+.claseInactiva {
+  color: #282c34;
+  margin: 30px;
+}
 /*# sourceMappingURL=app.css.map */

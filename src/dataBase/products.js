@@ -1,9 +1,9 @@
-[
+export const products = [
   {
     "id": 7109,
     "id_item": "17113436-3595558",
     "shop": "Only",
-    "title": "Pantalon Chilli Comfy. Cintura Elastizada. - Simply Green",
+    "title": "Pantalon Chilli Comfy - Simply Green",
     "full_search": "PIECES  Simply Green Pantalon Chilli Comfy. Cintura Elastizada. - Simply Green",
     "price": 899,
     "full_price": "",
@@ -22,7 +22,7 @@
     "ship": "Envío Estándar - Mirtrans: Envío sin costo en compras mayores a UYU 1.500 Costo normal: UYU 160.",
     "category": "pantalones",
     "colors": "Simply Green",
-    "gender": "Mujer"
+    "gender": "mujer"
   },
   {
     "id": 7110,
@@ -45,7 +45,7 @@
     "ship": "Envío Estándar - Mirtrans: Envío sin costo en compras mayores a UYU 1.500 Costo normal: UYU 160.",
     "category": "pantalones",
     "colors": "Rosin",
-    "gender": "Mujer"
+    "gender": "mujer"
   },
   {
     "id": 7114,
@@ -69,7 +69,7 @@
     "ship": "Envío Estándar - Mirtrans: Envío sin costo en compras mayores a UYU 1.500 Costo normal: UYU 160.",
     "category": "pantalones",
     "colors": "Brownie",
-    "gender": "Mujer"
+    "gender": "mujer"
   },
   {
     "id": 7115,
@@ -93,7 +93,7 @@
     "ship": "Envío Estándar - Mirtrans: Envío sin costo en compras mayores a UYU 1.500 Costo normal: UYU 160.",
     "category": "pantalones",
     "colors": "Rose Brown",
-    "gender": "Mujer"
+    "gender": "mujer"
   },
   {
     "id": 11116,
@@ -119,7 +119,7 @@
     "ship": "Envío Estándar - Mirtrans: Envío sin costo en compras mayores a UYU 1.500 Costo normal: UYU 160.",
     "category": "sweaters",
     "colors": "Frosty Green",
-    "gender": "Mujer"
+    "gender": "mujer"
   },
   {
     "id": 11117,
@@ -141,7 +141,7 @@
     "ship": "Envío Estándar - Mirtrans: Envío sin costo en compras mayores a UYU 1.500 Costo normal: UYU 160.",
     "category": "sweaters",
     "colors": "Pine Grove",
-    "gender": "Mujer"
+    "gender": "mujer"
   },
   {
     "id": 13174,
@@ -165,7 +165,7 @@
     "ship": "Envío Estándar - Mirtrans: Envío sin costo en compras mayores a UYU 1.500 Costo normal: UYU 160.",
     "category": "chaquetas",
     "colors": "Tree House",
-    "gender": "Hombre"
+    "gender": "hombre"
   },
   {
     "id": 13176,
@@ -187,7 +187,7 @@
     "ship": "Envío Estándar - Mirtrans: Envío sin costo en compras mayores a UYU 1.500 Costo normal: UYU 160.",
     "category": "chaquetas",
     "colors": "Peat",
-    "gender": "Hombre"
+    "gender": "hombre"
   },
   {
     "id": 13178,
@@ -211,7 +211,7 @@
     "ship": "Envío Estándar - Mirtrans: Envío sin costo en compras mayores a UYU 1.500 Costo normal: UYU 160.",
     "category": "chaquetas",
     "colors": "Blue Denim",
-    "gender": "Hombre"
+    "gender": "hombre"
   },
   {
     "id": 13284,
@@ -235,7 +235,7 @@
     "ship": "Envío Estándar - Mirtrans: Envío sin costo en compras mayores a UYU 1.500 Costo normal: UYU 160.",
     "category": "camisas",
     "colors": "Peat",
-    "gender": "Hombre"
+    "gender": "hombre"
   },
   {
     "id": 14317,
@@ -257,7 +257,7 @@
     "ship": "Envío Estándar - Mirtrans: Envío sin costo en compras mayores a UYU 1.500 Costo normal: UYU 160.",
     "category": "pantalones",
     "colors": "Incense",
-    "gender": "Hombre"
+    "gender": "hombre"
   },
   {
     "id": 14319,
@@ -281,7 +281,7 @@
     "ship": "Envío Estándar - Mirtrans: Envío sin costo en compras mayores a UYU 1.500 Costo normal: UYU 160.",
     "category": "pantalones",
     "colors": "Cherry Mahogany",
-    "gender": "Hombre"
+    "gender": "hombre"
   },
   {
     "id": 14321,
@@ -305,7 +305,7 @@
     "ship": "Envío Estándar - Mirtrans: Envío sin costo en compras mayores a UYU 1.500 Costo normal: UYU 160.",
     "category": "pantalones",
     "colors": "Chinchilla",
-    "gender": "Hombre"
+    "gender": "hombre"
   },
   {
     "id": 14649,
@@ -329,7 +329,7 @@
     "ship": "Envío Estándar - Mirtrans: Envío sin costo en compras mayores a UYU 1.500 Costo normal: UYU 160.",
     "category": "camisetas",
     "colors": "Star White",
-    "gender": "Hombre"
+    "gender": "hombre"
   },
   {
     "id": 14651,
@@ -353,7 +353,7 @@
     "ship": "Envío Estándar - Mirtrans: Envío sin costo en compras mayores a UYU 1.500 Costo normal: UYU 160.",
     "category": "camisetas",
     "colors": "Kangaroo",
-    "gender": "Hombre"
+    "gender": "hombre"
   },
   {
     "id": 59698,
@@ -376,7 +376,7 @@
     "ship": "Envío Estándar - Mirtrans: Envío sin costo en compras mayores a UYU 1.500 Costo normal: UYU 160.",
     "category": "sweaters",
     "colors": "Dark Sapphire",
-    "gender": "Niños"
+    "gender": "ninios"
   },
   {
     "id": 59710,
@@ -397,7 +397,7 @@
     "ship": "Envío Estándar - Mirtrans: Envío sin costo en compras mayores a UYU 1.500 Costo normal: UYU 160.",
     "category": "sweaters",
     "colors": "Dusty Blue",
-    "gender": "Niños"
+    "gender": "ninios"
   },
   {
     "id": 59481,
@@ -421,7 +421,7 @@
     "ship": "Envío Estándar - Mirtrans: Envío sin costo en compras mayores a UYU 1.500 Costo normal: UYU 160.",
     "category": "pantalones",
     "colors": "Deco Rose",
-    "gender": "Niños"
+    "gender": "ninios"
   },
   {
     "id": 59487,
@@ -442,7 +442,7 @@
     "ship": "Envío Estándar - Mirtrans: Envío sin costo en compras mayores a UYU 1.500 Costo normal: UYU 160.",
     "category": "pantalones",
     "colors": "Curry",
-    "gender": "Niños"
+    "gender": "ninios"
   },
   {
     "id": 59492,
@@ -465,7 +465,7 @@
     "ship": "Envío Estándar - Mirtrans: Envío sin costo en compras mayores a UYU 1.500 Costo normal: UYU 160.",
     "category": "pantalones",
     "colors": "Pale Mauve",
-    "gender": "Niños"
+    "gender": "ninios"
   },
   {
     "id": 59496,
@@ -487,7 +487,7 @@
     "ship": "Envío Estándar - Mirtrans: Envío sin costo en compras mayores a UYU 1.500 Costo normal: UYU 160.",
     "category": "pantalones",
     "colors": "Woodrose",
-    "gender": "Niños"
+    "gender": "ninios"
   },
   {
     "id": 37451,
@@ -508,7 +508,7 @@
     "ship": "Envío Estándar - Mirtrans: Envío sin costo en compras mayores a UYU 1.500 Costo normal: UYU 160.",
     "category": "camisetas",
     "colors": "Bright White",
-    "gender": "Mujer"
+    "gender": "mujer"
   },
   {
     "id": 37452,
@@ -529,7 +529,7 @@
     "ship": "Envío Estándar - Mirtrans: Envío sin costo en compras mayores a UYU 1.500 Costo normal: UYU 160.",
     "category": "camisetas",
     "colors": "Pumice Stone",
-    "gender": "Mujer"
+    "gender": "mujer"
   },
   {
     "id": 37460,
@@ -550,7 +550,7 @@
     "ship": "Envío Estándar - Mirtrans: Envío sin costo en compras mayores a UYU 1.500 Costo normal: UYU 160.",
     "category": "camisetas",
     "colors": "Bijou Blue",
-    "gender": "Mujer"
+    "gender": "mujer"
   },
   {
     "id": 37552,
@@ -575,7 +575,7 @@
     "ship": "Envío Estándar - Mirtrans: Envío sin costo en compras mayores a UYU 1.500 Costo normal: UYU 160.",
     "category": "camisetas",
     "colors": "Black",
-    "gender": "Mujer"
+    "gender": "mujer"
   },
   {
     "id": 17084,
@@ -597,7 +597,7 @@
     "ship": "Envío Estándar - Mirtrans: Envío sin costo en compras mayores a UYU 1.500 Costo normal: UYU 160.",
     "category": "sweaters",
     "colors": "Dark Sapphire",
-    "gender": "Niños"
+    "gender": "ninios"
   },
   {
     "id": 17086,
@@ -621,7 +621,7 @@
     "ship": "Envío Estándar - Mirtrans: Envío sin costo en compras mayores a UYU 1.500 Costo normal: UYU 160.",
     "category": "sweaters",
     "colors": "Café Au Lait",
-    "gender": "Niños"
+    "gender": "ninios"
   },
   {
     "id": 17089,
@@ -644,7 +644,7 @@
     "ship": "Envío Estándar - Mirtrans: Envío sin costo en compras mayores a UYU 1.500 Costo normal: UYU 160.",
     "category": "sweaters",
     "colors": "Dark Sapphire",
-    "gender": "Niños"
+    "gender": "ninios"
   },
   {
     "id": 17090,
@@ -666,7 +666,7 @@
     "ship": "Envío Estándar - Mirtrans: Envío sin costo en compras mayores a UYU 1.500 Costo normal: UYU 160.",
     "category": "sweaters",
     "colors": "Dark Sapphire",
-    "gender": "Niños"
+    "gender": "ninios"
   },
   {
     "id": 17092,
@@ -691,7 +691,7 @@
     "ship": "Envío Estándar - Mirtrans: Envío sin costo en compras mayores a UYU 1.500 Costo normal: UYU 160.",
     "category": "sweaters",
     "colors": "Dark Sapphire",
-    "gender": "Niños"
+    "gender": "ninios"
   },
   {
     "id": 17093,
@@ -713,7 +713,7 @@
     "ship": "Envío Estándar - Mirtrans: Envío sin costo en compras mayores a UYU 1.500 Costo normal: UYU 160.",
     "category": "sweaters",
     "colors": "Pale Mauve",
-    "gender": "Niños"
+    "gender": "ninios"
   },
   {
     "id": 17094,
@@ -738,7 +738,7 @@
     "ship": "Envío Estándar - Mirtrans: Envío sin costo en compras mayores a UYU 1.500 Costo normal: UYU 160.",
     "category": "sweaters",
     "colors": "Grey Melange",
-    "gender": "Niños"
+    "gender": "ninios"
   },
   {
     "id": 17051,
@@ -760,7 +760,7 @@
     "ship": "Envío Estándar - Mirtrans: Envío sin costo en compras mayores a UYU 1.500 Costo normal: UYU 160.",
     "category": "camisetas",
     "colors": "Dark Sapphire",
-    "gender": "Niños"
+    "gender": "ninios"
   },
   {
     "id": 17056,
@@ -783,7 +783,7 @@
     "ship": "Envío Estándar - Mirtrans: Envío sin costo en compras mayores a UYU 1.500 Costo normal: UYU 160.",
     "category": "camisetas",
     "colors": "Zephyr",
-    "gender": "Niños"
+    "gender": "ninios"
   },
   {
     "id": 7154,
@@ -806,7 +806,7 @@
     "ship": "Envío Estándar - Mirtrans: Envío sin costo en compras mayores a UYU 1.500 Costo normal: UYU 160.",
     "category": "pantalones",
     "colors": "Black",
-    "gender": "Mujer"
+    "gender": "mujer"
   },
   {
     "id": 7155,
@@ -829,7 +829,7 @@
     "ship": "Envío Estándar - Mirtrans: Envío sin costo en compras mayores a UYU 1.500 Costo normal: UYU 160.",
     "category": "pantalones",
     "colors": "Black",
-    "gender": "Mujer"
+    "gender": "mujer"
   },
   {
     "id": 7156,
@@ -854,7 +854,7 @@
     "ship": "Envío Estándar - Mirtrans: Envío sin costo en compras mayores a UYU 1.500 Costo normal: UYU 160.",
     "category": "pantalones",
     "colors": "Laurel Wreath",
-    "gender": "Mujer"
+    "gender": "mujer"
   },
   {
     "id": 7158,
@@ -878,7 +878,7 @@
     "ship": "Envío Estándar - Mirtrans: Envío sin costo en compras mayores a UYU 1.500 Costo normal: UYU 160.",
     "category": "pantalones",
     "colors": "Black",
-    "gender": "Mujer"
+    "gender": "mujer"
   },
   {
     "id": 13721,
@@ -902,7 +902,7 @@
     "ship": "Envío Estándar - Mirtrans: Envío sin costo en compras mayores a UYU 1.500 Costo normal: UYU 160.",
     "category": "jeans",
     "colors": "Blue Denim",
-    "gender": "Hombre"
+    "gender": "hombre"
   },
   {
     "id": 14302,
@@ -926,7 +926,7 @@
     "ship": "Envío Estándar - Mirtrans: Envío sin costo en compras mayores a UYU 1.500 Costo normal: UYU 160.",
     "category": "pantalones",
     "colors": "Chinchilla",
-    "gender": "Hombre"
+    "gender": "hombre"
   },
   {
     "id": 14664,
@@ -949,7 +949,7 @@
     "ship": "Envío Estándar - Mirtrans: Envío sin costo en compras mayores a UYU 1.500 Costo normal: UYU 160.",
     "category": "camisetas",
     "colors": "Black",
-    "gender": "Hombre"
+    "gender": "hombre"
   },
   {
     "id": 14679,
@@ -973,7 +973,7 @@
     "ship": "Envío Estándar - Mirtrans: Envío sin costo en compras mayores a UYU 1.500 Costo normal: UYU 160.",
     "category": "camisetas",
     "colors": "Monks Robe",
-    "gender": "Hombre"
+    "gender": "hombre"
   },
   {
     "id": 14680,
@@ -994,7 +994,7 @@
     "ship": "Envío Estándar - Mirtrans: Envío sin costo en compras mayores a UYU 1.500 Costo normal: UYU 160.",
     "category": "camisetas",
     "colors": "White",
-    "gender": "Hombre"
+    "gender": "hombre"
   },
   {
     "id": 14681,
@@ -1016,7 +1016,7 @@
     "ship": "Envío Estándar - Mirtrans: Envío sin costo en compras mayores a UYU 1.500 Costo normal: UYU 160.",
     "category": "camisetas",
     "colors": "White",
-    "gender": "Hombre"
+    "gender": "hombre"
   },
   {
     "id": 14682,
@@ -1038,7 +1038,7 @@
     "ship": "Envío Estándar - Mirtrans: Envío sin costo en compras mayores a UYU 1.500 Costo normal: UYU 160.",
     "category": "camisetas",
     "colors": "White",
-    "gender": "Hombre"
+    "gender": "hombre"
   },
   {
     "id": 14906,
@@ -1062,7 +1062,7 @@
     "ship": "Envío Estándar - Mirtrans: Envío sin costo en compras mayores a UYU 1.500 Costo normal: UYU 160.",
     "category": "sweaters",
     "colors": "Dark Navy",
-    "gender": "Hombre"
+    "gender": "hombre"
   },
   {
     "id": 14909,
@@ -1086,7 +1086,7 @@
     "ship": "Envío Estándar - Mirtrans: Envío sin costo en compras mayores a UYU 1.500 Costo normal: UYU 160.",
     "category": "sweaters",
     "colors": "Chinchilla",
-    "gender": "Hombre"
+    "gender": "hombre"
   },
   {
     "id": 14911,
@@ -1107,7 +1107,7 @@
     "ship": "Envío Estándar - Mirtrans: Envío sin costo en compras mayores a UYU 1.500 Costo normal: UYU 160.",
     "category": "sweaters",
     "colors": "Dark Navy",
-    "gender": "Hombre"
+    "gender": "hombre"
   },
   {
     "id": 14916,
@@ -1131,7 +1131,7 @@
     "ship": "Envío Estándar - Mirtrans: Envío sin costo en compras mayores a UYU 1.500 Costo normal: UYU 160.",
     "category": "sweaters",
     "colors": "Black",
-    "gender": "Hombre"
+    "gender": "hombre"
   },
   {
     "id": 14918,
@@ -1155,7 +1155,7 @@
     "ship": "Envío Estándar - Mirtrans: Envío sin costo en compras mayores a UYU 1.500 Costo normal: UYU 160.",
     "category": "sweaters",
     "colors": "Dark Navy",
-    "gender": "Hombre"
+    "gender": "hombre"
   },
   {
     "id": 14922,
@@ -1179,7 +1179,7 @@
     "ship": "Envío Estándar - Mirtrans: Envío sin costo en compras mayores a UYU 1.500 Costo normal: UYU 160.",
     "category": "sweaters",
     "colors": "Olive Night",
-    "gender": "Hombre"
+    "gender": "hombre"
   },
   {
     "id": 14926,
@@ -1203,7 +1203,7 @@
     "ship": "Envío Estándar - Mirtrans: Envío sin costo en compras mayores a UYU 1.500 Costo normal: UYU 160.",
     "category": "sweaters",
     "colors": "Cloud Dancer",
-    "gender": "Hombre"
+    "gender": "hombre"
   },
   {
     "id": 14936,
@@ -1226,7 +1226,7 @@
     "ship": "Envío Estándar - Mirtrans: Envío sin costo en compras mayores a UYU 1.500 Costo normal: UYU 160.",
     "category": "sweaters",
     "colors": "Silver Lining",
-    "gender": "Hombre"
+    "gender": "hombre"
   },
   {
     "id": 14941,
@@ -1250,6 +1250,6 @@
     "ship": "Envío Estándar - Mirtrans: Envío sin costo en compras mayores a UYU 1.500 Costo normal: UYU 160.",
     "category": "sweaters",
     "colors": "Dark Navy",
-    "gender": "Hombre"
+    "gender": "hombre"
   }
 ]
