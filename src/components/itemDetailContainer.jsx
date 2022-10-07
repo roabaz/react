@@ -36,7 +36,8 @@ export const ItemDetailContainer = () => {
             {
 
                 idItems.map(element => {
-                    element.sizes = element.sizes.toString().replace("," , " | ");
+                    console.log(element.sizes);
+                    element.sizes = element.sizes.toString().replace("," , " | ").replace("," , " | ").replace("," , " | ");
                     return (
                         <ItemDetail
                             key={element.id} description={element.description}

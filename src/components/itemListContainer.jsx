@@ -72,15 +72,14 @@ export const ItemListContainer = (params) => {
     return (
 
         <div className="container text-center p-5">
+            <button className="alert alert-primary mx-2"><b> {count} productos </b></button>
+            <button className="btn btn-success mx-2" onClick={addCount}><b>+</b></button>
+            <button className="btn btn-warning mx-2" onClick={lessCount}><b>-</b></button>
+            <button className="btn btn-danger mx-2" onClick={clearCount}><b>0</b></button>
 
-            {/*      <button className="alert alert-primary mx-2"><b> {count} productos </b></button>
-                    <button className="btn btn-success mx-2" onClick={addCount}><b>+</b></button>
-                    <button className="btn btn-warning mx-2" onClick={lessCount}><b>-</b></button>
-                    <button className="btn btn-danger mx-2" onClick={clearCount}><b>0</b></button>
-            */}
 
             {
-                loading ? <img height={100} src={logoLoading} alt="" />
+                loading ? <div> <img height={100} src={logoLoading} alt="" /></div>
                     :
                     <div>
                         <b>
