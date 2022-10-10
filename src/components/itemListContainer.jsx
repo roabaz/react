@@ -2,10 +2,18 @@
 import React, { useState, useEffect } from 'react';
 import { ItemList } from './itemList';
 import { products } from '../dataBase/products';
-import { useParams } from 'react-router-dom';
+import { useParams, useSearchParams } from 'react-router-dom';
 import logoLoading from "../resources/img/loading_icon.gif";
 
 export const ItemListContainer = (params) => {
+    
+const [param, setParams] = useSearchParams();
+const q = param.get('q') ?? "";
+
+console.log("awdawd",q);
+
+
+
     const [count, setCountValue] = useState(0);
     const addCount = () => {
         setCountValue(count + 1);
@@ -58,6 +66,13 @@ export const ItemListContainer = (params) => {
                 setTotalItems(totalItems = categoryFilter.length);
                 setLoading(false);
             }
+            else if (q){
+                const qFilter = result.filter(elm => elm.title.toLowerCase().includes(q));
+                console.log(qFilter)
+                setProductsItems(qFilter)
+                setTotalItems(totalItems = qFilter.length);
+                setLoading(false);
+            }
             //!Results with out filtering
             else {
                 setProductsItems(result)
@@ -66,7 +81,7 @@ export const ItemListContainer = (params) => {
             }
             /*console.log(totalItems);*/
         });
-    }, [category, gender, totalItems, loading]);
+    }, [category, gender, totalItems, loading, q]);
 
 
     return (

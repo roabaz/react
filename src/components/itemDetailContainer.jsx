@@ -20,7 +20,7 @@ export const ItemDetailContainer = () => {
 
     useEffect(() => {
         getProducts().then((result) => {
-            //!Filter by Gender
+            //!Filter by id
             if (id) {
                 const idItems = result.filter(elm => elm.id == id);
                 setIdItems(idItems);
