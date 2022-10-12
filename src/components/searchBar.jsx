@@ -14,8 +14,8 @@ export const SearchBar = () => {
 
     const getSearch = (e) => {
         setSearch(e.target.value)
-        console.log(e.target.value)
-    }
+/*         console.log(e.target.value)
+ */    }
 
     const addParams = (e) => {
         setParams({
@@ -33,7 +33,7 @@ export const SearchBar = () => {
                     </Link>
                     <div className="d-flex col-xl-6 col-8" >
                         <input className="form-control me-2" type="search" onChange={getSearch} placeholder="Search" aria-label="Search" />
-                        <button className="btn btn-outline-success"  onClick={addParams} >Search</button>
+                        <button className="btn btn-outline-success" onClick={addParams} >Search</button>
                     </div>
                     <div className="d-flex p-2">
                         <button className="btn btn-dark" href="#">

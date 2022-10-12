@@ -6,28 +6,13 @@ import { useParams, useSearchParams } from 'react-router-dom';
 import logoLoading from "../resources/img/loading_icon.gif";
 
 export const ItemListContainer = (params) => {
-    
-const [param, setParams] = useSearchParams();
-const q = param.get('q') ?? "";
 
-console.log("awdawd",q);
+    const [param] = useSearchParams();
+    const q = param.get('q') ?? "";
 
+    /* console.log("ver q", q); */
 
-
-    const [count, setCountValue] = useState(0);
-    const addCount = () => {
-        setCountValue(count + 1);
-    };
-    const lessCount = () => {
-        if (count > 0) {
-            setCountValue(count - 1);
-        }
-    };
-    const clearCount = () => {
-        if (count > 0) {
-            setCountValue(count - count);
-        }
-    };
+   
 
     //!Variables form URL
     const { category } = useParams();
@@ -66,9 +51,10 @@ console.log("awdawd",q);
                 setTotalItems(totalItems = categoryFilter.length);
                 setLoading(false);
             }
-            else if (q){
+            //!Results by q search
+            else if (q) {
                 const qFilter = result.filter(elm => elm.title.toLowerCase().includes(q));
-                console.log(qFilter)
+                /*console.log(qFilter)*/
                 setProductsItems(qFilter)
                 setTotalItems(totalItems = qFilter.length);
                 setLoading(false);
@@ -87,11 +73,6 @@ console.log("awdawd",q);
     return (
 
         <div className="container text-center p-5">
-            <button className="alert alert-primary mx-2"><b> {count} productos </b></button>
-            <button className="btn btn-success mx-2" onClick={addCount}><b>+</b></button>
-            <button className="btn btn-warning mx-2" onClick={lessCount}><b>-</b></button>
-            <button className="btn btn-danger mx-2" onClick={clearCount}><b>0</b></button>
-
 
             {
                 loading ? <div> <img height={100} src={logoLoading} alt="" /></div>

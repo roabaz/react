@@ -4,6 +4,7 @@ import { SearchBar } from "./components/searchBar";
 import { ItemListContainer } from "./components/itemListContainer";
 import { ItemDetailContainer } from "./components/itemDetailContainer";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import {Count} from "./components/count"
 function App() {
   return (
     <BrowserRouter>
@@ -12,6 +13,8 @@ function App() {
         <hr />
         <NavBar />
         <hr />
+        <Count/>
+
         <Routes>
           <Route path="/" element={<ItemListContainer />}/>
           <Route path="/itemDetail/:id" element={<ItemDetailContainer />}/>
