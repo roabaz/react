@@ -4,6 +4,7 @@ import { ItemList } from './itemList';
 import { products } from '../dataBase/products';
 import { useParams, useSearchParams } from 'react-router-dom';
 import logoLoading from "../resources/img/loading_icon.gif";
+import { NavBar } from "../components/navBar";
 
 export const ItemListContainer = (params) => {
 
@@ -12,7 +13,7 @@ export const ItemListContainer = (params) => {
 
     /* console.log("ver q", q); */
 
-   
+
 
     //!Variables form URL
     const { category } = useParams();
@@ -39,8 +40,15 @@ export const ItemListContainer = (params) => {
 
             //!Filter by Gender
             if (gender && category === undefined) {
-                const genderFilter = result.filter(elm => elm.gender === gender);
-                setProductsItems(genderFilter)
+                console.log(q);
+                let genderFilter = [];
+                if(q){
+                     genderFilter = result.filter(elm => elm.gender === gender).filter(elm => elm.title.toLowerCase().includes(q))
+                    setProductsItems(genderFilter)
+                }else{
+                     genderFilter = result.filter(elm => elm.gender === gender);
+                    setProductsItems(genderFilter)
+                }
                 setTotalItems(totalItems = genderFilter.length);
                 setLoading(false);
             }
@@ -72,12 +80,14 @@ export const ItemListContainer = (params) => {
 
     return (
 
-        <div className="container text-center p-5">
+        <div className="container text-center p-2">
 
             {
                 loading ? <div> <img height={100} src={logoLoading} alt="" /></div>
                     :
                     <div>
+                        <NavBar />
+                        <hr />
                         <b>
                             <p className='text-dark alert alert-info col-2 mx-auto'>{totalItems} Productos</p>
                         </b>
@@ -89,9 +99,7 @@ export const ItemListContainer = (params) => {
 
 
             <p className='p-5'>{params.content}</p>
-            <footer className='bg-dark p-5 text-light'>
-                Todos los derechos reservados - Cubic Ecommerce 2022
-            </footer>
+            
         </div>
 
     );

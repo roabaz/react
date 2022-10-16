@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { products } from '../dataBase/products';
 import { ItemDetail } from '../components/itemDetail';
+import {Count} from "../components/count";
 
 export const ItemDetailContainer = () => {
 
@@ -29,6 +30,10 @@ export const ItemDetailContainer = () => {
         });
     }, []);
 
+    const onAdd = (quantity) => {
+        console.log("Compraste", quantity, "productos");
+    }
+
 
 
     return (
@@ -49,7 +54,11 @@ export const ItemDetailContainer = () => {
                         />
                     )
                 })
+                
             }
+
+            <Count initial={1} stock={30} onAdd={onAdd}/>
+
         </div>
     )
 }

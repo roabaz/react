@@ -1,10 +1,10 @@
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
+export const Count = ({stock, initial, onAdd}) => {
 
-export const Count = () => {
-
-    const [count, setCountValue] = useState(0);
+    const [count, setCountValue] = useState(parseInt(initial));
     const addCount = () => {
         setCountValue(count + 1);
     };
@@ -13,18 +13,17 @@ export const Count = () => {
             setCountValue(count - 1);
         }
     };
-    const clearCount = () => {
-        if (count > 0) {
-            setCountValue(count - count);
-        }
-    };
+
+    useEffect(() => {
+        setCountValue(parseInt(initial));
+    },[initial]);
+
     return (
-        <div className="container text-center ">
-            <p>Contador</p>
+        <div className="container text-center mt-3">
             <button className="alert alert-primary mx-2"><b> {count} productos </b></button>
-            <button className="btn btn-success mx-2" onClick={addCount}><b>+</b></button>
-            <button className="btn btn-warning mx-2" onClick={lessCount}><b>-</b></button>
-            <button className="btn btn-danger mx-2" onClick={clearCount}><b>0</b></button>
+            <button disabled={count <= 1} className="btn btn-warning mx-2" onClick={lessCount}><b>-</b></button>
+            <button disabled={count >= stock} className="btn btn-success mx-2" onClick={addCount}><b>+</b></button>
+            <Link to={"/cartDetail"}><button disabled={stock <= 0} className="btn btn-dark mx-2" onClick={() => onAdd(count)}><b>Finalizar Compra</b></button></Link>
         </div>
     )
 }
