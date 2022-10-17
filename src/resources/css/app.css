@@ -91,4 +91,8 @@ a {
   color: #282c34;
   margin: 30px;
 }
+
+.card {
+  min-height: 400px;
+}
 /*# sourceMappingURL=app.css.map */

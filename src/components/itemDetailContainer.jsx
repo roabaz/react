@@ -8,8 +8,8 @@ import {Count} from "../components/count";
 export const ItemDetailContainer = () => {
 
     const { id } = useParams();
-    console.log(id);
-
+/*     console.log(id);
+ */
 
     //!  Promises  //
     const getProducts = () => {
@@ -21,7 +21,8 @@ export const ItemDetailContainer = () => {
 
     useEffect(() => {
         getProducts().then((result) => {
-            //!Filter by id
+            //!Filter by id    console.log(id);
+
             if (id) {
                 const idItems = result.filter(elm => elm.id == id);
                 setIdItems(idItems);
@@ -41,8 +42,8 @@ export const ItemDetailContainer = () => {
             {
 
                 idItems.map(element => {
-                    console.log(element.sizes);
-                    element.sizes = element.sizes.toString().replace(/,/g , " | ");
+/*                     console.log(element.sizes);
+ */                    element.sizes = element.sizes.toString().replace(/,/g , " | ");
                     return (
                         <ItemDetail
                             key={element.id} description={element.description}

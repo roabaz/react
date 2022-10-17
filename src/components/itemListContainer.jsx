@@ -40,8 +40,8 @@ export const ItemListContainer = (params) => {
 
             //!Filter by Gender
             if (gender && category === undefined) {
-                console.log(q);
-                let genderFilter = [];
+/*                 console.log(q);
+ */                let genderFilter = [];
                 if(q){
                      genderFilter = result.filter(elm => elm.gender === gender).filter(elm => elm.title.toLowerCase().includes(q))
                     setProductsItems(genderFilter)
