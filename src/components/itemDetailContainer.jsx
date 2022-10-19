@@ -27,15 +27,15 @@ export const ItemDetailContainer = () => {
             if (id) {
                 const idItems = result.filter(elm => elm.id == id);
                 setIdItems(idItems);
-                /*console.log(idItems)*/
-            }
+/*                 console.log(idItems)
+ */            }
         });
     }, []);
 
     const {addNewProduct} = useContext(cartContext);
     const onAdd = (quantity) => {
         console.log("Compraste", quantity, "productos");
-        addNewProduct(idItems,quantity);
+        addNewProduct(idItems[0],quantity);
     }
 
 

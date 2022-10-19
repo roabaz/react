@@ -12,14 +12,12 @@ export const CartProvider = ({ children }) => {
   const [productsOnCart, setProductsOnCart] = useState([]);
 
   const addNewProduct = (item, quantity) => {
-
+    console.log(item.id)
     if (isInCart(item.id)) {
-      const productosOnCartCopy = [...productsOnCart]
-
+      const productosOnCartCopy = [...productsOnCart];
       const posProduct = productosOnCartCopy.findIndex((elemento) => elemento.id === item.id);
       productosOnCartCopy[posProduct].quantity += quantity;
       productosOnCartCopy[posProduct].totalPrice = productosOnCartCopy[posProduct].quantity * productosOnCartCopy[posProduct].price;
-
       setProductsOnCart(productosOnCartCopy);
     } else {
       const newProduct = { ...item, quantity: quantity, totalPrice: quantity * item.price, };
@@ -41,13 +39,16 @@ export const CartProvider = ({ children }) => {
 
   const removeItem = (id)=> {
     const newProducts = productsOnCart.filter((elemento)=>elemento.id !== id);
-
+    setProductsOnCart(newProducts);
   }
 
-
+  const clear = () => {
+    const cleanCart = [];
+    setProductsOnCart(cleanCart);
+  }
 
   return (
-    <cartContext.Provider value={{ productsOnCart, addNewProduct, getTotalPrice, getTotalProducts }}>
+    <cartContext.Provider value={{ productsOnCart, addNewProduct, getTotalPrice, getTotalProducts, removeItem, clear }}>
       {children}
     </cartContext.Provider>
   )
