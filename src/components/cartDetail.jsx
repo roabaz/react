@@ -17,14 +17,20 @@ export const CartDetail = () => {
           <div className="text-center">{
             productsOnCart.map((producto) => (
               <>
-                <div className="alert alert info">
-                  <p>Titulo {producto.title}</p>
-                  <p>Precio ${producto.price}</p>
-                  <p>Cantidad {producto.quantity}</p>
-                  <p>${producto.totalPrice}</p>
-                  <button onClick={() => removeItem(producto.id)}>
-                    Borrar
-                  </button>
+                <div className="alert alert-success">
+                  <b>
+                  <div className="row">                  
+                    <div className="col-2"><img height={50} src={producto.pic}/></div>
+                    <div className="col-3">Titulo {producto.title}</div>
+                    <div className="col-2">Precio ${producto.price}</div>
+                    <div className="col-2">Cantidad {producto.quantity}</div>
+                    <div className="col-2">${producto.totalPrice}</div>
+                    
+                    <button className="col-1 btn btn-danger" onClick={() => removeItem(producto.id)}>
+                      Borrar
+                    </button>
+                  </div>
+                  </b>
                 </div>
               </>
             ))
@@ -38,7 +44,7 @@ export const CartDetail = () => {
               {getTotalProducts()}
             </b></p>
 
-            <button onClick={() => clear()}>
+            <button className="btn btn-danger" onClick={() => clear()}>
               Limpiar carrito
             </button>
           </div>
