@@ -23,7 +23,7 @@ export const Count = ({stock, initial, onAdd}) => {
             <button className="alert alert-primary mx-2"><b> {count} productos </b></button>
             <button disabled={count <= 1} className="btn btn-warning mx-2" onClick={lessCount}><b>-</b></button>
             <button disabled={count >= stock} className="btn btn-success mx-2" onClick={addCount}><b>+</b></button>
-            <Link to={"/cartDetail"}><button disabled={stock <= 0} className="btn btn-dark mx-2" onClick={() => onAdd(count)}><b>Finalizar Compra</b></button></Link>
+            <button disabled={stock <= 0} className="btn btn-dark mx-2" onClick={() => onAdd(count)}><b>Finalizar Compra</b></button>
         </div>
     )
 }

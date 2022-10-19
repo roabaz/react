@@ -1,15 +1,14 @@
-import { NavLink } from "react-router-dom";
 
 export const ItemDetail = (data) => {
-    console.log(data);
+ 
     return (
         <div className="card item ">
             <div className="row">
-                <div className="col-5">
+                <div className="col-xl-5 col-12">
                     <img height={390} src={data.pic} />
 
                 </div>
-                <div className="col-7">
+                <div className="col-xl-7 col-12">
 
                     <div className="mx-auto">
                         <b>
@@ -58,6 +57,7 @@ export const ItemDetail = (data) => {
                         </b>
 
                     </div>
+
                 </div>
             </div>
         </div>

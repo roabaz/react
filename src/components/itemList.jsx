@@ -6,7 +6,7 @@ export const ItemList = ({ data }) => {
 
     return (
         <div className='row'>
-            <Filters />
+           {/*  <Filters /> */}
             <div className="col-9 row mx-auto">
 
                 {

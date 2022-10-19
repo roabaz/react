@@ -4,6 +4,8 @@ import { useParams } from 'react-router-dom';
 import { products } from '../dataBase/products';
 import { ItemDetail } from '../components/itemDetail';
 import {Count} from "../components/count";
+import { useContext } from 'react';
+import { cartContext } from '../context/cartContext';
 
 export const ItemDetailContainer = () => {
 
@@ -22,7 +24,6 @@ export const ItemDetailContainer = () => {
     useEffect(() => {
         getProducts().then((result) => {
             //!Filter by id    console.log(id);
-
             if (id) {
                 const idItems = result.filter(elm => elm.id == id);
                 setIdItems(idItems);
@@ -31,8 +32,10 @@ export const ItemDetailContainer = () => {
         });
     }, []);
 
+    const {addNewProduct} = useContext(cartContext);
     const onAdd = (quantity) => {
         console.log("Compraste", quantity, "productos");
+        addNewProduct(idItems,quantity);
     }
 
 
