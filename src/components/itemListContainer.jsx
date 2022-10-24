@@ -94,12 +94,6 @@ export const ItemListContainer = (params) => {
         getData();
     }, [category,gender,  totalItems, loading, q,])
 
-
-
-
-
-
-
     return (
 
         <div className="container text-center p-2">

@@ -12,7 +12,7 @@ export const ItemList = ({ data }) => {
                 {
                     data.map(element => {
                         return (
-                            <Item key={element.id} title={element.title} pic={element.pic} currency={element.currency} id={element.id} price={element.price} fullPrice={element.full_price} />
+                            <Item key={element.id} id={element.id_fireStore} title={element.title} pic={element.pic} currency={element.currency}  price={element.price} fullPrice={element.full_price} />
                         )
                     })
                 }

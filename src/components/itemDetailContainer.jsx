@@ -1,41 +1,67 @@
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { useParams } from 'react-router-dom';
-import { products } from '../dataBase/products';
 import { ItemDetail } from '../components/itemDetail';
-import {Count} from "../components/count";
-import { useContext } from 'react';
+import { Count } from "../components/count";
 import { cartContext } from '../context/cartContext';
-
+import { collection,getDocs} from "firebase/firestore";
+import { db } from "../utils/firebase";
 export const ItemDetailContainer = () => {
 
     const { id } = useParams();
-/*     console.log(id);
- */
+    /*     console.log(id);
+     */
 
-    //!  Promises  //
-    const getProducts = () => {
-        return new Promise((resolve, reject) => {
-            resolve(products);
-        })
-    }
-    const [idItems, setIdItems] = useState([]);
+    const [detailItem, setDetailItem] = useState([]);
+    const { addNewProduct } = useContext(cartContext);
 
     useEffect(() => {
-        getProducts().then((result) => {
-            //!Filter by id    console.log(id);
-            if (id) {
-                const idItems = result.filter(elm => elm.id == id);
-                setIdItems(idItems);
-/*                 console.log(idItems)
- */            }
-        });
-    }, []);
+        const getData = async () => {
+            //crear referencia del piunto de acceso de la informacion.
+            const queryRef = collection(db, "cubic-react");
+            //obtiene todos los documentos de la collection
+            const response = await getDocs(queryRef);
+/*             console.log(response);
+ */            const documents = response.docs;
 
-    const {addNewProduct} = useContext(cartContext);
+            const result = documents.map(element => {
+                return ({
+                    ...element.data(),
+                    id_fireStore: element.id
+                })
+            })
+            console.log(result);
+
+            const itemDetail = result.filter(elm => elm.id_fireStore === id);
+            setDetailItem(itemDetail)
+
+        }
+        getData();
+    }, [])
+
+
+
+
+
+    /*    //!  Promises  //
+       const getProducts = () => {
+           return new Promise((resolve, reject) => {
+               resolve(products);
+           })
+       }
+   
+       useEffect(() => {
+           getProducts().then((result) => {
+               //!Filter by id    console.log(id);
+               if (id) {
+                   const idItems = result.filter(elm => elm.id == id);
+                   setIdItems(idItems);
+              }
+           });
+       }, []); */
     const onAdd = (quantity) => {
         console.log("Compraste", quantity, "productos");
-        addNewProduct(idItems[0],quantity);
+        addNewProduct(detailItem[0], quantity);
     }
 
 
@@ -44,9 +70,9 @@ export const ItemDetailContainer = () => {
         <div className="">
             {
 
-                idItems.map(element => {
+                detailItem.map(element => {
 /*                     console.log(element.sizes);
- */                    element.sizes = element.sizes.toString().replace(/,/g , " | ");
+ */                    element.sizes = element.sizes.toString().replace(/,/g, " | ");
                     return (
                         <ItemDetail
                             key={element.id} description={element.description}
@@ -58,10 +84,10 @@ export const ItemDetailContainer = () => {
                         />
                     )
                 })
-                
+
             }
 
-            <Count initial={1} stock={30} onAdd={onAdd}/>
+            <Count initial={1} stock={30} onAdd={onAdd} />
 
         </div>
     )
