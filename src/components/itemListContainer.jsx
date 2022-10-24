@@ -5,48 +5,64 @@ import { products } from '../dataBase/products';
 import { useParams, useSearchParams } from 'react-router-dom';
 import logoLoading from "../resources/img/loading_icon.gif";
 import { NavBar } from "../components/navBar";
+import { collection, doc, getDoc, getDocs, query, where } from "firebase/firestore";
+import { db } from "../utils/firebase";
+
 
 export const ItemListContainer = (params) => {
 
     const [param] = useSearchParams();
     const q = param.get('q') ?? "";
-
     /* console.log("ver q", q); */
-
-
-
     //!Variables form URL
     const { category } = useParams();
     /*console.log(category);*/
     const { gender } = useParams();
 
 
-    //!  Promises  //
-    const getProducts = () => {
-        return new Promise((resolve, reject) => {
-            setTimeout(() => {
-                resolve(products);
-            }, 1000);
-        })
-    }
+
     //!Hooks
     const [productsItems, setProductsItems] = useState([]);
     const [totalItems, setTotalItems] = useState(0);
     const [loading, setLoading] = useState(true);
 
-    useEffect(() => {
-        getProducts().then((result) => {
-            let totalItems;
 
+    useEffect(() => {
+        const getData = async () => {
+            //crear referencia del piunto de acceso de la informacion.
+            const queryRef = collection(db, "cubic-react");
+            //obtiene todos los documentos de la collection
+            const response = await getDocs(queryRef);
+/*             console.log(response);
+ */            const documents = response.docs;
+
+            //contenido de un documento
+            /*  console.log("Contenido ",documents[0].data());
+                console.log("id doc ", documents[0].id);
+                const newDoc = {
+                    ...documents[0].data(),
+                    id_fireStore: documents[0].id
+                }
+                console.log(newDoc); 
+            */
+            const result = documents.map(element => {
+                return ({
+                    ...element.data(),
+                    id_fireStore: element.id
+                })
+            })
+            console.log(result);
+
+            let totalItems;
             //!Filter by Gender
             if (gender && category === undefined) {
 /*                 console.log(q);
  */                let genderFilter = [];
                 if(q){
-                     genderFilter = result.filter(elm => elm.gender === gender).filter(elm => elm.title.toLowerCase().includes(q))
+                     genderFilter = result.filter(elm => elm.gender.toLowerCase() === gender).filter(elm => elm.title.toLowerCase().includes(q))
                     setProductsItems(genderFilter)
                 }else{
-                     genderFilter = result.filter(elm => elm.gender === gender);
+                     genderFilter = result.filter(elm => elm.gender.toLowerCase() === gender);
                     setProductsItems(genderFilter)
                 }
                 setTotalItems(totalItems = genderFilter.length);
@@ -54,7 +70,9 @@ export const ItemListContainer = (params) => {
             }
             //!Filter by Gender and Category
             else if (category && gender) {
-                const categoryFilter = result.filter(elm => elm.category === category).filter(elm => elm.gender === gender);
+                console.log(gender);
+                console.log(category);
+                const categoryFilter = result.filter(elm => elm.category === category).filter(elm => elm.gender.toLowerCase() === gender);
                 setProductsItems(categoryFilter)
                 setTotalItems(totalItems = categoryFilter.length);
                 setLoading(false);
@@ -62,7 +80,6 @@ export const ItemListContainer = (params) => {
             //!Results by q search
             else if (q) {
                 const qFilter = result.filter(elm => elm.title.toLowerCase().includes(q));
-                /*console.log(qFilter)*/
                 setProductsItems(qFilter)
                 setTotalItems(totalItems = qFilter.length);
                 setLoading(false);
@@ -73,9 +90,14 @@ export const ItemListContainer = (params) => {
                 setTotalItems(totalItems = result.length);
                 setLoading(false);
             }
-            /*console.log(totalItems);*/
-        });
-    }, [category, gender, totalItems, loading, q]);
+        }
+        getData();
+    }, [category,gender,  totalItems, loading, q,])
+
+
+
+
+
 
 
     return (
@@ -99,7 +121,7 @@ export const ItemListContainer = (params) => {
 
 
             <p className='p-5'>{params.content}</p>
-            
+
         </div>
 
     );

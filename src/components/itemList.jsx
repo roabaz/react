@@ -6,8 +6,8 @@ export const ItemList = ({ data }) => {
 
     return (
         <div className='row'>
-           {/*  <Filters /> */}
-            <div className="col-9 row mx-auto">
+         {/*    <Filters />  */}
+            <div className="col-10 row mx-auto">
 
                 {
                     data.map(element => {

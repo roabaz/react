@@ -8,8 +8,7 @@ export const Filters = () => {
     products.forEach((item) => {
         if (item.sizes) {
             let k = item.sizes;
-
-            k.forEach((item2, i) => {
+            k.forEach((item2) => {
                 if (!sizes.includes(item2)) {
                     sizes.push(item2);
                 }

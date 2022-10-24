@@ -51,13 +51,13 @@ export const NavBar = () => {
             </div>
           </li>
           <li className="nav-item dropdown">
-            <NavLink to={"/ninios"} className={({isActive})=>isActive === true ? 'claseActiva' : 'claseInactiva'} >
+            <NavLink to={"/niños"} className={({isActive})=>isActive === true ? 'claseActiva' : 'claseInactiva'} >
               <b>NIÑOS</b>
             </NavLink>
             <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <NavLink className="dropdown-item" to={"/ninios/camisetas"}>Camisetas</NavLink>
-              <NavLink className="dropdown-item" to={"/ninios/sweaters"}>Sweaters</NavLink>
-              <NavLink className="dropdown-item" to={"/ninios/pantalones"}>Pantalones</NavLink>
+            <NavLink className="dropdown-item" to={"/niños/camisetas"}>Camisetas</NavLink>
+              <NavLink className="dropdown-item" to={"/niños/sweaters"}>Sweaters</NavLink>
+              <NavLink className="dropdown-item" to={"/niños/pantalones"}>Pantalones</NavLink>
             </div>
           </li>
         </ul>
