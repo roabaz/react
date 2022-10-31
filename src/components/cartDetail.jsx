@@ -10,7 +10,7 @@ export const CartDetail = () => {
   const value = useContext(cartContext);
 
   const { productsOnCart, getTotalPrice, getTotalProducts, removeItem, clear } = value;
-  const [oderId, setOrderId] = useState("");
+  const [oderId, setOrderId] = useState();
 
 
   const sendOrder = (evt) => {
@@ -34,9 +34,8 @@ export const CartDetail = () => {
       setOrderId(result.id);
     });
 
-
     swal("Tu compra fue enviada, sigue tu orden con el siguiente ID:", oderId);
-    
+    clear(); 
   }
 
   return (
