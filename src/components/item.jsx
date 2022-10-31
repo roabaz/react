@@ -27,7 +27,6 @@ export const Item = (data) => {
                 </div>
             </NavLink>
 
-            <button className="btn btn-dark m-3">Agregar</button>
         </div>
     )
 }
