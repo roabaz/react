@@ -5,17 +5,18 @@ import carritoImg from "../resources/img/vacio.png";
 import { db } from "../utils/firebase";
 import { collection, addDoc } from "firebase/firestore";
 import swal from 'sweetalert';
+import { CartItem } from "./cartItem";
 
-export const CartDetail = () => {
+export const CartDetailContainer = () => {
   const value = useContext(cartContext);
 
-  const { productsOnCart, getTotalPrice, getTotalProducts, removeItem, clear } = value;
+  const { productsOnCart, getTotalPrice, getTotalProducts, clear } = value;
   const [oderId, setOrderId] = useState();
 
 
   const sendOrder = (evt) => {
     evt.preventDefault();
-    /*     console.log(evt.target[0].value); */
+    /*console.log(evt.target[0].value); */
     const order = {
       buyer: {
         name: evt.target[0].value,
@@ -27,10 +28,10 @@ export const CartDetail = () => {
       items: productsOnCart,
       total: getTotalPrice()
     }
-    /*     console.log(order); */
+    /*console.log(order); */
     const queryRef = collection(db, "orders");
     addDoc(queryRef, order).then((result) => {
-      console.log("resultado", result.id)
+      /*console.log("resultado", result.id)*/
       setOrderId(result.id);
       swal("Tu compra fue enviada, sigue tu orden con el siguiente ID:", result.id);
       clear();
@@ -45,21 +46,7 @@ export const CartDetail = () => {
           <div className="text-center">{
             productsOnCart.map((product) => (
               <>
-                <div className="alert alert-success">
-                  <b>
-                    <div className="row" key={product.id}>
-                      <div className="col-2"><img height={50} src={product.pic} /></div>
-                      <div className="col-3">Titulo {product.title}</div>
-                      <div className="col-2">Precio ${product.price}</div>
-                      <div className="col-2">Cantidad {product.quantity}</div>
-                      <div className="col-2">${product.totalPrice}</div>
-
-                      <button className="col-1 btn btn-danger" onClick={() => removeItem(product.id)}>
-                        Borrar
-                      </button>
-                    </div>
-                  </b>
-                </div>
+                <CartItem key={product.id} pic={product.pic} title={product.title} price={product.price} quantity={product.quantity} totalPrice={product.totalPrice} id={product.id} />
               </>
             ))
           }
@@ -94,8 +81,6 @@ export const CartDetail = () => {
               <button type="submit" className="btn btn-success col-4 mx-auto">Comprar</button>
             </form>
           </div>
-
-
 
           :
 

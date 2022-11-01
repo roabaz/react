@@ -1,7 +1,7 @@
 import logo from "../resources/img/logo.webp";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUser } from '@fortawesome/free-solid-svg-icons'
-import { Cart } from "./cart";
+import { CartWidget } from "./cartWidget";
 import { Link } from "react-router-dom";
 
 export const SubBar = () => {
@@ -23,7 +23,7 @@ export const SubBar = () => {
                         </Link>
 
                         <Link to={'/cartDetail'}>
-                            <Cart />
+                            <CartWidget />
                         </Link>
                     </div>
 

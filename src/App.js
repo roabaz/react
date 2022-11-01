@@ -3,7 +3,7 @@ import { SubBar } from "./components/subBar";
 import { ItemListContainer } from "./components/itemListContainer";
 import { ItemDetailContainer } from "./components/itemDetailContainer";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { CartDetail } from "./components/cartDetail";
+import { CartDetailContainer } from "./components/cartDetailContainer";
 import { CartProvider } from "./context/cartContext";
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
         <SubBar />
         <Routes>
           <Route path="/" element={<ItemListContainer />} />
-          <Route path="/cartDetail" element={<CartDetail />} />
+          <Route path="/cartDetail" element={<CartDetailContainer />} />
           <Route path="/itemDetail/:id" element={<ItemDetailContainer />} />
           <Route path="/:gender/:category" element={<ItemListContainer />} />
           <Route path="/:gender" element={<ItemListContainer />} />

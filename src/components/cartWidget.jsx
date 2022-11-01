@@ -3,7 +3,7 @@ import { faCartShopping } from '@fortawesome/free-solid-svg-icons'
 import { useContext } from 'react';
 import { cartContext } from '../context/cartContext';
 
-export const Cart = () => {
+export const CartWidget = () => {
 const {getTotalProducts} = useContext(cartContext)
     return (
         <button className="mx-1 btn btn-sm btn-dark " href="#">

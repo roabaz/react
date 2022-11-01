@@ -33,36 +33,26 @@ export const ItemListContainer = (params) => {
             const queryRef = collection(db, "cubic-react");
             //obtiene todos los documentos de la collection
             const response = await getDocs(queryRef);
-/*             console.log(response);
- */            const documents = response.docs;
+            /*console.log(response);*/
+            const documents = response.docs;
 
-            //contenido de un documento
-            /*  console.log("Contenido ",documents[0].data());
-                console.log("id doc ", documents[0].id);
-                const newDoc = {
-                    ...documents[0].data(),
-                    id_fireStore: documents[0].id
-                }
-                console.log(newDoc); 
-            */
             const result = documents.map(element => {
                 return ({
                     ...element.data(),
                     id_fireStore: element.id
                 })
             })
-            console.log(result);
-
+            /* console.log(result);*/
             let totalItems;
             //!Filter by Gender
             if (gender && category === undefined) {
-/*                 console.log(q);
- */                let genderFilter = [];
-                if(q){
-                     genderFilter = result.filter(elm => elm.gender.toLowerCase() === gender).filter(elm => elm.title.toLowerCase().includes(q))
+                /*console.log(q); */
+                let genderFilter = [];
+                if (q) {
+                    genderFilter = result.filter(elm => elm.gender.toLowerCase() === gender).filter(elm => elm.title.toLowerCase().includes(q))
                     setProductsItems(genderFilter)
-                }else{
-                     genderFilter = result.filter(elm => elm.gender.toLowerCase() === gender);
+                } else {
+                    genderFilter = result.filter(elm => elm.gender.toLowerCase() === gender);
                     setProductsItems(genderFilter)
                 }
                 setTotalItems(totalItems = genderFilter.length);
@@ -70,8 +60,8 @@ export const ItemListContainer = (params) => {
             }
             //!Filter by Gender and Category
             else if (category && gender) {
-                console.log(gender);
-                console.log(category);
+            /*     console.log(gender);
+                console.log(category); */
                 const categoryFilter = result.filter(elm => elm.category === category).filter(elm => elm.gender.toLowerCase() === gender);
                 setProductsItems(categoryFilter)
                 setTotalItems(totalItems = categoryFilter.length);
@@ -92,7 +82,7 @@ export const ItemListContainer = (params) => {
             }
         }
         getData();
-    }, [category,gender,  totalItems, loading, q,])
+    }, [category, gender, totalItems, loading, q,])
 
     return (
 
