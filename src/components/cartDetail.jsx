@@ -54,7 +54,7 @@ export const CartDetail = () => {
                       <div className="col-2">Cantidad {product.quantity}</div>
                       <div className="col-2">${product.totalPrice}</div>
 
-                      <button className="col-1 btn btn-danger" onClick={() => removeItem(producto.id)}>
+                      <button className="col-1 btn btn-danger" onClick={() => removeItem(product.id)}>
                         Borrar
                       </button>
                     </div>
