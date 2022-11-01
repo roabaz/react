@@ -43,16 +43,16 @@ export const CartDetail = () => {
         productsOnCart.length > 0 ?
 
           <div className="text-center">{
-            productsOnCart.map((producto) => (
+            productsOnCart.map((product) => (
               <>
                 <div className="alert alert-success">
                   <b>
-                    <div className="row">
-                      <div className="col-2"><img height={50} src={producto.pic} /></div>
-                      <div className="col-3">Titulo {producto.title}</div>
-                      <div className="col-2">Precio ${producto.price}</div>
-                      <div className="col-2">Cantidad {producto.quantity}</div>
-                      <div className="col-2">${producto.totalPrice}</div>
+                    <div className="row" key={product.id}>
+                      <div className="col-2"><img height={50} src={product.pic} /></div>
+                      <div className="col-3">Titulo {product.title}</div>
+                      <div className="col-2">Precio ${product.price}</div>
+                      <div className="col-2">Cantidad {product.quantity}</div>
+                      <div className="col-2">${product.totalPrice}</div>
 
                       <button className="col-1 btn btn-danger" onClick={() => removeItem(producto.id)}>
                         Borrar
