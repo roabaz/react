@@ -32,10 +32,9 @@ export const CartDetail = () => {
     addDoc(queryRef, order).then((result) => {
       console.log("resultado", result.id)
       setOrderId(result.id);
+      swal("Tu compra fue enviada, sigue tu orden con el siguiente ID:", result.id);
+      clear();
     });
-
-    swal("Tu compra fue enviada, sigue tu orden con el siguiente ID:", oderId);
-    clear(); 
   }
 
   return (
@@ -94,10 +93,6 @@ export const CartDetail = () => {
               </div>
               <button type="submit" className="btn btn-success col-4 mx-auto">Comprar</button>
             </form>
-
-
-
-
           </div>
 
 
